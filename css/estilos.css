@@ -1,0 +1,170 @@
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');
+</style>
+
+
+:root{
+    --bs-body-bg: #0C183A;
+}
+
+body{
+background-color: #0C183A !important;
+font-family: 'Work Sans', sans-serif !important;
+}
+
+.spinner-box{
+    background-color: #0C183A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: loader;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    animation-delay: 1.2s;
+}
+
+.spinner-border {
+    height: 80px;
+    width: 80px;
+}
+
+@keyframes loader{
+    0%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+/*Barra de Navegación*/
+.logo{
+    width: 25%;
+    margin: 0.5em;
+    margin-left: 2em;
+    align-content: center;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+
+
+/*Contenido de Hero*/
+.bg{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://64.media.tumblr.com/2b130263d49a92395c4caa7ea3bd4ef0/7d86cd869b767bb9-17/s540x810/aae6758c153de2927eaff002f2c3b0479357aa53.gif);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.herocontainer{
+    min-height: 800px;
+}
+
+.herotext{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.buttontext{
+    display: flex;
+  justify-content: center;
+}
+
+.buttontext:hover{
+    color:rgb(34, 91, 171);
+}
+
+
+/*PRODUCT CARDS*/
+
+.pillbg{
+    background-color: white;
+    border-radius: 20vh;
+}
+
+.row{
+    width: 80vw;
+}
+
+.img-container{
+position: relative;
+}
+
+.image{
+    transition: .5s ease ;
+    backface-visibility: hidden;
+}
+
+.overlay{
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container:hover .image{
+opacity: 0.2;
+}
+
+.img-container:hover .overlay{
+    opacity: 1;
+    }
+
+
+ /*Subscribe*/
+.subscribe{
+    background-color: #0C183A;
+}
+
+.texto{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
+}
+
+
+ /*Footer*/
+.copy{
+    font-size: 12px;
+}
+
+
+@media(max-width: 991px){
+    .sidebar{
+    background-color:rgba(161, 176, 225, 0.15);
+    backdrop-filter: blur(10px);
+    }
+}
